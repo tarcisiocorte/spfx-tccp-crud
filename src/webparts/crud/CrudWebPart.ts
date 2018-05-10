@@ -13,7 +13,7 @@ import { ICrudContainerProps } from "./components/ICrudContainerProps";
 
 export interface ICrudWebPartProps {
   description: string;
-  authorName: string;
+  listName: string;
 }
 
 export default class CrudWebPart extends BaseClientSideWebPart<
@@ -24,13 +24,13 @@ export default class CrudWebPart extends BaseClientSideWebPart<
       ICrudContainerProps
     > = React.createElement(Crud, {
       description: this.properties.description,
-      authorName: this.properties.authorName
+      listName: this.properties.listName
     });
     const element1: React.ReactElement<
       ICrudContainerProps
     > = React.createElement(Crud, {
       description: this.properties.description,
-      authorName: this.properties.authorName
+      listName: this.properties.listName
     });
 
     ReactDom.render(element, this.domElement);
@@ -52,11 +52,7 @@ export default class CrudWebPart extends BaseClientSideWebPart<
               groupName: strings.BasicGroupName,
               groupFields: [
                 PropertyPaneTextField("description", {
-                  label: strings.DescriptionFieldLabel
-                }),
-
-                PropertyPaneTextField("authorName", {
-                  label: strings.AuthorNameFieldLabel
+                  label: strings.listNameFieldLabel
                 })
               ]
             }

@@ -1,8 +1,7 @@
 declare interface ICrudWebPartStrings {
   PropertyPaneDescription: string;
   BasicGroupName: string;
-  DescriptionFieldLabel: string;
-  AuthorNameFieldLabel: string;
+  listNameFieldLabel: string;
 }
 
 declare module "CrudWebPartStrings" {
