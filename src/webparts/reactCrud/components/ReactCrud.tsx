@@ -59,6 +59,9 @@ export default class ReactCrud extends React.Component<
               <span className="ms-font-xl ms-fontColor-white">
                 Sample SharePoint CRUD operations in React
               </span>
+              <span className="ms-font-xl ms-fontColor-Green">
+                ${this.props.siteUrl}
+              </span>
             </div>
           </div>
           <div
@@ -233,10 +236,12 @@ export default class ReactCrud extends React.Component<
   }
 
   private readItems(): void {
+    console.log(this.props.siteUrl);
     this.setState({
       status: "Loading all items...",
       items: []
     });
+
     this.props.spHttpClient
       .get(
         `${this.props.siteUrl}/_api/web/lists/getbytitle('${
@@ -481,6 +486,7 @@ export default class ReactCrud extends React.Component<
   }
 
   private getListItemEntityTypeName(): Promise<string> {
+    console.log("doing some tests::::" + this.props.siteUrl);
     return new Promise<string>(
       (
         resolve: (listItemEntityTypeName: string) => void,
