@@ -3,26 +3,17 @@
     "https://dev.office.com/json-schemas/spfx-build/config.2.0.schema.json",
   "version": "2.0",
   "bundles": {
-    "crud-web-part": {
+    "spfx-crud-web-part": {
       "components": [
         {
-          "entrypoint": "./lib/webparts/crud/CrudWebPart.js",
-          "manifest": "./src/webparts/crud/CrudWebPart.manifest.json"
-        }
-      ]
-    },
-    "react-web-part": {
-      "components": [
-        {
-          "entrypoint": "./lib/webparts/reactCrud/ReactCrudWebPart.js",
-          "manifest": "./src/webparts/reactCrud/ReactCrudWebPart.manifest.json"
+          "entrypoint": "./lib/webparts/spfxCrud/SpfxCrudWebPart.js",
+          "manifest": "./src/webparts/spfxCrud/SpfxCrudWebPart.manifest.json"
         }
       ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "CrudWebPartStrings": "lib/webparts/crud/loc/{locale}.js",
-    "reactCrudStrings": "lib/webparts/reactCrud/loc/{locale}.js"
+    "SpfxCrudWebPartStrings": "lib/webparts/spfxCrud/loc/{locale}.js"
   }
 }

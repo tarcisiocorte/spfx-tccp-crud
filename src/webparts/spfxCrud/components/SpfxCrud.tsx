@@ -1,11 +1,11 @@
 import * as React from "react";
+import { ISpfxCrudProps } from "./ISpfxCrudProps";
+import { escape } from "@microsoft/sp-lodash-subset";
 import { TextField, Button, ButtonType } from "office-ui-fabric-react";
 import { MaskedTextField } from "office-ui-fabric-react/lib/TextField";
 
-import IViewDataProps from "./INewItem";
-
-export default class NewItem extends React.Component {
-  public render(): JSX.Element {
+export default class SpfxCrud extends React.Component<ISpfxCrudProps, {}> {
+  public render(): React.ReactElement<ISpfxCrudProps> {
     return (
       <div>
         <div>
@@ -32,18 +32,11 @@ export default class NewItem extends React.Component {
         <div>
           <br />
           <br />
-          <Button
-            onClick={this._alertClicked}
-            className="ms-borderColor-themeDarkAlt ms-bgColor-themeTertiary ms-bgColor-themeDarkAlt--hover"
-          >
+          <Button className="ms-borderColor-themeDarkAlt ms-bgColor-themeTertiary ms-bgColor-themeDarkAlt--hover">
             Add
           </Button>
         </div>
       </div>
     );
-  }
-
-  private _alertClicked(): void {
-    alert("Clicked !!!");
   }
 }
